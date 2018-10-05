@@ -4,4 +4,5 @@ from django.http import HttpResponse
 
 # Create your views here.
 def posts_list(request):
-    return HttpResponse('<h1>Hello world</h1>')
+    n = ['Ira', 'Zheka', 'Sasha']
+    return render(request, 'blog/index.html', context={'names': n})
